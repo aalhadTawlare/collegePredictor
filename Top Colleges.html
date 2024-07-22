@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Colleges Predictor | Top Colleges</title>
+    <link rel="icon" href="https://img.freepik.com/free-vector/blue-graduation-cap_1262-4405.jpg?t=st=1714646000~exp=1714649600~hmac=7062ab773460646633205de14ec0236c97d8e230aac54bc2c8d035b2ddf53334&w=740">
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/ce95135c1f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .card:hover {
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2); 
+        transition: box-shadow 0.3s ease; 
+      }
+      body{
+        background: linear-gradient(94deg, rgba(255,253,250,1) 67%, rgba(255,231,177,1) 100%);;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background: linear-gradient(94deg, rgba(255,253,250,1) 67%, rgba(255,231,177,1) 100%);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img style="scale: 1.33; border-radius: 50%;"
+          src="https://img.freepik.com/free-vector/blue-graduation-cap_1262-4405.jpg?t=st=1714646000~exp=1714649600~hmac=7062ab773460646633205de14ec0236c97d8e230aac54bc2c8d035b2ddf53334&w=740"
+                 
+                  alt="Bootstrap"
+                  width="50"
+                  height="50"
+                />
+
+          
+          <h8 class="ps-2" style="font-weight: 700; font-family: Tahoma; font-size: 1.5rem; color: #ffb53f;">College Predictor</h8>
+        </a>
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-5">
+            <li class="nav-item">
+              <a
+                class="nav-link active pe-4"
+                aria-current="page"
+                href="/"
+                style="font-size: 20px;"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle pe-4"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="font-size: 20px;"
+              >
+                Topics
+              </a>
+              <ul class="dropdown-menu dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2 py-2"
+                    href="/learn"
+                    ><span
+                      class="d-inline-block bg-primary rounded-circle p-1"
+                    ></span>
+                    Learn Coding</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2 py-2"
+                    href="/colleges"
+                    ><span
+                      class="d-inline-block bg-danger rounded-circle p-1"
+                    ></span>
+                    Top Colleges</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2 py-2"
+                    href="/support"
+                    ><span
+                      class="d-inline-block bg-warning rounded-circle p-1"
+                    ></span>
+                    Support Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2 py-2"
+                    href="/faq"
+                    ><span
+                      class="d-inline-block bg-success rounded-circle p-1"
+                    ></span>
+                    FAQs</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pe-4" href="/about" style="font-size: 20px;"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact" style="font-size: 20px;"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              type="button"
+              class="btn"
+              style="background: rgb(242,180,40);
+              background: linear-gradient(0deg, rgba(242,180,40,1) 37%, rgba(251,212,125,1) 100%);; color: white; font-size: 20px; font-weight: 600;"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+      <main>
+
+        <section class="text-center container" style="background-image: url('https://source.unsplash.com/1000x800/?college,student,school');
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+        position: relative;
+        background-blend-mode: darken;
+        margin-top: 8em;
+        color: white;">
+          <div class="row pt-4">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="pb-3" style="font-weight: 700;">Top NIT and IITs</h1>
+              <p class="lead text-body-secondary" style="font-weight: 600;">There are top 10 IITs and NIT which 
+                are the most popular among india as well as in other countries. These institutions are the best known for it's academics as well as it's creative nature of studies which enhnace the understanding.</p>
+              <p class="mt-3">
+                <a href="#" class="btn btn-primary my-2 me-3" style="border-color: #dd8800; color: #dd8800; "
+                        
+                onmouseover="this.style.color='#dd8800'; this.style.backgroundColor='white';"
+                onmouseout="this.style.backgroundColor='transparent';this.style.color ='#dd8800'">More Colleges</a>
+                <a href="#" class="btn btn-secondary my-2" style="border-color: #dd8800; color: #fcfcfc; background-color: #dd8800;">Click to search</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <div class="album py-5 bg-body-tertiary">
+          <div class="container">
+      
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card"  style="background:#ffe7b1 ; border: 2px #ffb53f solid; height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px; height: 70%;" src="https://sustainabilitynext.in/wp-content/uploads/2017/01/IIT-Madras-EPS.jpg" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><b>Indian Institute of Technology (IIT) Madras</b><br>Location: Chennai, Tamil Nadu<br>Score: 90.19</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://www.iitm.ac.in/">
+                          <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                          onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                          onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'"
+                          >View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="col">
+                <div class="card" style="background: #ffe7b1 ; border: 2px #ffb53f solid; height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px; height: 70%;" src="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/01/12/Pictures/_52816770-d8e3-11e6-a260-7aa04c68bc63.jpg" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><b>Indian Institute of Technology (IIT) Delhi</b><br>
+
+                      Location: New Delhi, Delhi <br>
+                      
+                      Score: 88.96</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://home.iitd.ac.in/">
+                          <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                          onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                          onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'">View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col"> 
+                <div class="card" style="background: #ffe7b1 ; border: 2px #ffb53f solid;height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px;height: 70%;" src="https://th.bing.com/th/id/R.784069c980c4a77e8a22410621374679?rik=afn4AJruX2fvLA&riu=http%3a%2f%2fstatic.dnaindia.com%2fsites%2fdefault%2ffiles%2fstyles%2ffull%2fpublic%2f2016%2f08%2f25%2f495197-iit-bombay.jpg&ehk=tKKTQ4m6FSst9LB4tPO3ywLHUKcFcsuccyMNbWs%2f67s%3d&risl=&pid=ImgRaw&r=0" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><b style="font-size: 15px;">Indian Institute of Technology (IIT) Bombay</b><br>
+
+                      Location: Mumbai, Maharastra <br>
+                      
+                      Score: 85.16</p></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://www.iitb.ac.in/">
+                         <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                         onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                         onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'">View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card" style="background: #ffe7b1 ; border: 2px #ffb53f solid;height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px;height: 70%;"  src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/12/15/943569-iit-kanpur-campus.jpg" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><b>Indian Institute of Technology (IIT) Kanpur</b><br>
+
+                      Location: Kanpur, Uttar Pradesh <br>
+                      
+                      Score: 83.22</p></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://www.iitk.ac.in/">
+                          <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                          onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                          onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'">View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background: #ffe7b1 ; border: 2px #ffb53f solid;height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px;height: 70%;"  src="https://th.bing.com/th/id/OIP.Asa9-j1Sj71OHf_f-oUngAHaEK?pid=ImgDet&rs=1" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><b style="font-size: 15px;">Indian Institute of Technology (IIT) Kharagpur</b><br>
+
+                      Location: Kharagpur, West Bengal <br>
+                      
+                      Score: 82.03</p></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://www.iitkgp.ac.in/">
+                          <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                          onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                          onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'">View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background: #ffe7b1 ; border: 2px #ffb53f solid;height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px;height: 70%;"  src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2017/07/07/590802-iit-roorkee-campus.jpg" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><b style="font-size: 15px;">Indian Institute of Technology (IIT) Roorkee</b><br>
+
+                      Location: Roorkee, Uttarakhand <br>
+                      
+                      Score: 78.08</p></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://www.iitr.ac.in/"> 
+                         <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                         onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                         onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'">View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card" style="background: #ffe7b1 ; border: 2px #ffb53f solid;height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px;height: 70%;"  src="https://miro.medium.com/v2/resize:fit:7248/1*zcwHU37EaiADlE7Z5gbBbA.jpeg" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><b style="font-size: 15px;">Indian Institute of Technology (IIT) Guwahati</b><br>
+
+                      Location: Guwahati, Assam <br>
+                      
+                      Score: 73.84</p></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://www.iitg.ac.in/">
+                          <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                          onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                          onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'">View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background: #ffe7b1 ; border: 2px #ffb53f solid;height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px;height: 70%;"  width="420px" height = "230px" src="data:image/jpeg;base64,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" alt="" height="200px">
+                  <div class="card-body">
+                    <p class="card-text"><b style="font-size: 15px;">Indian Institute of Technology (IIT) Hyderabad</b><br>
+
+                      Location: Hyderabad, Telangana <br>
+                      
+                      Score: 68.69</p></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://www.iith.ac.in/">
+                          <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                          onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                          onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'">View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="background: #ffe7b1 ; border: 2px #ffb53f solid;height: 100%; width: 100%;">
+                  <img style="border-radius: 5px 5px 0px 0px;height: 70%;"  src="https://images.shiksha.com/mediadata/images/articles/1653451571phpjoZgph.jpeg" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><b style="font-size: 15px;">National Institute of Technology (NIT) Karnatka</b><br>
+
+                      Location: Surathkal, Karnatka <br>
+                      
+                      Score: 64.19</p></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="https://www.nitk.ac.in/">
+                          <button type="button" class="btn btn-sm btn-outline-secondary" style="border-color: #dd8800; color: #dd8800;"
+                        
+                          onmouseover="this.style.backgroundColor='#dd8800'; this.style.color='white';"
+                          onmouseout="this.style.backgroundColor = 'transparent';this.style.color ='#dd8800'">View</button>
+                        </a>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0">© 2023 College Predictor, Inc</p>
+      
+          <img style="scale: 1.33; border-radius: 50%;"
+          src="https://img.freepik.com/free-vector/blue-graduation-cap_1262-4405.jpg?t=st=1714646000~exp=1714649600~hmac=7062ab773460646633205de14ec0236c97d8e230aac54bc2c8d035b2ddf53334&w=740"
+                 
+                  alt="Bootstrap"
+                  width="50"
+                  height="50"
+                />
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="/" class="nav-link px-2 text-black" >Home</a></li>
+            <li class="nav-item"><a href="/colleges" class="nav-link px-2 text-black">Colleges</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link px-2 text-black">About</a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link px-2 text-black">Contact Us</a></li>
+          </ul>
+        </footer>
+      </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
